@@ -1,0 +1,93 @@
+/* Estilo Geral */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+/* Estilo do Cabeçalho */
+
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo img{
+    height: 90px;
+    width: 130px;
+}
+
+header a{
+    color: rgba(255, 255, 255, 0.315);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: white;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0px 40px;
+    text-align: center;
+    max-width: 200px;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    background-color: rgb(38, 1, 124);
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s
+}
+
+.btn-contato button:hover{
+    box-shadow: 0 0 8px rgb(38, 1, 124);
+    transform: scale(1.05);
+}
+
+/* Estilo do topo do site */
+.banner{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    background-position: 0% 0%;
+    background-size:cover;
+    position: relative;
+}
+
+
