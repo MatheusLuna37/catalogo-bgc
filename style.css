@@ -1,0 +1,241 @@
+/* Estilo Geral */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scrollbar-color: #484D64 #252835
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+/* Estilo do Cabeçalho */
+header{
+    background: rgb(38, 1, 124);
+    border-radius: 8px;
+    height: auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    display: flex;
+    align-items: center;
+}
+
+.change{
+    display: none;
+}
+
+.button{
+    width: 0;
+}
+
+.mobile{
+    margin-left: 2vw;
+}
+
+header .logo{
+    display: table-cell;
+}
+
+header .logo img{
+    vertical-align: middle;
+    height: 30px;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: rgba(0, 141, 138, 0.913);
+    transform: scale(1.05);
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: right;
+}
+
+ul nav{
+    margin-left: 11.5vw;
+    margin-right: 12vw;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+ul li{
+    display: inline-block;
+    text-align: center;
+    max-width: 200px;
+}
+
+ul li a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav li a .bar{
+    width: 0px;
+    border-top-style: solid;
+    border-top-color: rgba(0, 141, 138, 0.913);
+    border-top-width: 3.5px;
+    transition: 0.2s;
+}
+
+nav a:hover .bar{
+    width: auto;
+}
+
+.btn-contato{
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.btn-contato button{
+    padding: 10px 30px;
+    margin-right: 2vw;
+    background-color: #9ef8ea;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(38, 1, 124);
+    border-radius: 9px;
+    cursor: pointer;
+    transition: .2s
+}
+
+.btn-contato button:hover{
+    box-shadow: 0 0 8px rgb(38, 1, 124);
+    transform: scale(1.05);
+}
+
+@media only screen and (max-width: 1240px) 
+{
+    .mobile{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    header{
+        justify-content: space-between;
+        margin-left: 4vw;
+        margin-right: 4vw;
+        padding-right: 1vw;
+        padding-left: 1vw;
+        flex-direction: column;
+    } 
+
+    header ul{
+        display: none;
+    }
+
+    .button {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        margin-right: 2vw;
+        height: auto;
+        width: auto;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 20px;
+        height: 4px;
+        margin: 2px;
+        background: white;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        transform: translate(0, 8px) rotate(45deg);
+        width: 25px;
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        transform: translate(0, -8px) rotate(-45deg);
+        width: 25px;
+    }
+
+    .menu-mobile{
+        left: 0;
+        width: 100%;
+        background: rgb(38, 1, 124);
+        flex-direction: column;
+        display: flex;
+        align-items: flex-start;
+        font-size: 22px;
+        width: 100%;
+    }
+
+    .menu-mobile nav{
+        padding-top: 2vh;
+        padding-left: 1.2vw;
+        margin-left: 0;
+        margin-right: 0;
+        gap: 0;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .menu-mobile nav li{
+        margin-top: 5px;
+        max-width: none;
+    }
+
+    .menu-mobile .btn-contato{
+        margin-top: 7vh;
+        margin-bottom: 2vh;
+        width: 100%;
+    }
+
+    .menu-mobile .btn-contato a{
+        padding-left: 1.2vw;
+        padding-right: 1.2vw;
+        width: 100%;
+    }
+
+    .menu-mobile .btn-contato button{
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .menu-mobile .btn-contato a:hover{
+        transform: scale(1.01)
+    }
+
+    .menu-mobile .btn-contato button:hover{
+        transform: none;
+    }
+}
