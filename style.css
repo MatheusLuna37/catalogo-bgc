@@ -50,6 +50,7 @@ header{
 
 header .logo{
     display: table-cell;
+    width: 11vw;
 }
 
 header .logo img{
@@ -77,17 +78,16 @@ ul{
 }
 
 ul nav{
-    margin-left: 11.5vw;
-    margin-right: 12vw;
+    width: 100%;
     list-style-type: none;
     display: flex;
     align-items: center;
-    gap: 2vw;
+    justify-content: center;
+    gap: 2.7vw;
 }
 
 ul li{
     display: inline-block;
-    padding: 0px 40px;
     text-align: center;
     max-width: 200px;
 }
@@ -111,13 +111,16 @@ nav a:hover .bar{
 }
 
 .btn-contato{
+    display: flex;
+    justify-content: right;
+    width: 11vw;
     margin-top: 6px;
     margin-bottom: 6px;
+    margin-right: 2vw;
 }
 
 .btn-contato button{
     padding: 10px 30px;
-    margin-right: 2vw;
     background-color: #9ef8ea;
     border: 0;
     font-size: 18px;
@@ -213,6 +216,7 @@ nav a:hover .bar{
 
     .menu-mobile nav li{
         margin-top: 5px;
+        padding: 0 0;
         max-width: none;
     }
 
