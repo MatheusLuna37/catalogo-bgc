@@ -34,6 +34,7 @@ header{
     margin-right: 8vw;
     display: flex;
     align-items: center;
+    z-index: 1;
 }
 
 .change{
@@ -136,8 +137,17 @@ nav a:hover .bar{
     transform: scale(1.05);
 }
 
+/* Estilo do banner */
+
+.banner img{
+    position: absolute;
+    width: 100vw;
+}
+
 @media only screen and (max-width: 1240px) 
 {
+    /* Estilo do cabeçalho */
+
     .mobile{
         display: flex;
         align-items: center;
@@ -146,9 +156,9 @@ nav a:hover .bar{
     }
 
     header{
-        justify-content: space-between;
         margin-left: 4vw;
         margin-right: 4vw;
+        justify-content: space-between;
         padding-right: 1vw;
         padding-left: 1vw;
         flex-direction: column;
@@ -244,4 +254,6 @@ nav a:hover .bar{
     .menu-mobile .btn-contato button:hover{
         transform: none;
     }
+
+    /* Estilo do banner */
 }
