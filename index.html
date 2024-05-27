@@ -15,22 +15,24 @@
     <title>Catálogo BGC</title>
 </head>
 <body>
+    <!--Cabeçalho-->
     <header id="Início">
-        <div class="mobile">
+        <div class="mobile-elements" id="mobile-elements">
             <div class="logo">
                 <a href="#Início">
                     <img src="images/onlyBGC-logo-branca.png" alt="Logo">
                 </a>
             </div>
             
-            <div class="button" onclick="dropDown(this)">
+            <!--Aparece apenas no modo mobile-->
+            <div class="menu-button" id="menu-button" onclick="dropDown(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
         </div>
 
-        <ul clas="menu" id="menu">
+        <ul class="menu" id="menu">
             <nav>
                 <li><a href="#">Brasileirão<div class="bar"></div></a></div></li>
                 <li><a href="#">La Liga<div class="bar"></div></a></li>
@@ -39,7 +41,7 @@
                 <li><a href="#">Outras<div class="bar"></div></a></li>
             </nav>
 
-            <div class="btn-contato">
+            <div class="contact-button">
                 <a href="#">
                     <button>Contato</button>
                 </a>
@@ -47,8 +49,53 @@
         </ul>
     </header>
 
+    <!--Banner-->
     <section class="banner">
         <img src="images/disputa_de_bola.jpg" alt="banner">
+    </section>
+
+    <!--Destaques-->
+    <section class="destaques">
+        <div class="dstq">
+            <a href="#">
+                <img src="images/pronta_entrega.jpg" alt="">
+            </a>
+        </div>
+        <div class="dstq">
+            <a href="#"">
+                <img src="images/pronta_entrega.jpg" alt="">
+            </a>
+        </div>
+        <div class="dstq">
+            <a href="#">
+                <img src="images/pronta_entrega.jpg" alt="">
+            </a>
+        </div>
+    </section>
+
+    <!--Brasileirão-->
+    <section class="brasileirão">
+
+    </section>
+
+    <!--La Liga-->
+    <section class="la-liga">
+
+    </section>
+
+    <!--Champions League-->
+    <section class="champions-league">
+
+    </section>
+
+    <!--Premier League-->
+    <section class="premier-league">
+
+    </section>
+    
+    <!--Outras-->
+    <section class="outras">
+
     </section>
 </body>
 <script src="script.js"></script>

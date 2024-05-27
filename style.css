@@ -1,5 +1,5 @@
 /* Estilo Geral */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,45 +13,38 @@ body {
     overflow-x: hidden;
 }
 
-.interface{
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-.flex{
-    display: flex;
+:root {
+    --cor-principal: rgb(38, 1, 124);
 }
 
 /* Estilo do Cabeçalho */
 
 header{
-    background: rgb(38, 1, 124);
-    border-radius: 8px;
+    position: fixed;
+    top: 0;
+    width: calc(100% - 16vw);
     height: auto;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    min-height: 60px;
+    margin-top: 15px;
     margin-left: 8vw;
-    margin-right: 8vw;
+    background: var(--cor-principal);
+    border-radius: 8px;
     display: flex;
     align-items: center;
     z-index: 1;
+    transition: top 0.3s ease-in-out
 }
 
-.change{
+.hidden-header{
+    top: -100px;
+}
+
+header .menu-button, .menu-button-selected{
     display: none;
 }
 
-.button{
-    width: 0;
-}
-
-.mobile{
+header .mobile-elements{
     margin-left: 2vw;
-}
-
-header .logo{
-    display: table-cell;
-    width: 11vw;
 }
 
 header .logo img{
@@ -71,14 +64,14 @@ header a:hover{
     transform: scale(1.05);
 }
 
-ul{
+header .menu{
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: right;
 }
 
-ul nav{
+header .menu nav{
     width: 100%;
     list-style-type: none;
     display: flex;
@@ -87,19 +80,19 @@ ul nav{
     gap: 2.7vw;
 }
 
-ul li{
+header .menu nav li{
     display: inline-block;
     text-align: center;
     max-width: 200px;
 }
 
-ul li a{
+header .menu nav li a{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-nav li a .bar{
+header .menu nav li a .bar{
     width: 0px;
     border-top-style: solid;
     border-top-color: rgba(0, 141, 138, 0.913);
@@ -107,68 +100,75 @@ nav li a .bar{
     transition: 0.2s;
 }
 
-nav a:hover .bar{
+header .menu nav a:hover .bar{
     width: auto;
 }
 
-.btn-contato{
-    display: flex;
-    justify-content: right;
-    width: 11vw;
+.contact-button button{
     margin-top: 6px;
     margin-bottom: 6px;
     margin-right: 2vw;
-}
-
-.btn-contato button{
     padding: 10px 30px;
     background-color: #9ef8ea;
     border: 0;
     font-size: 18px;
     font-weight: 600;
-    color: rgb(38, 1, 124);
+    color: var(--cor-principal);
     border-radius: 9px;
     cursor: pointer;
     transition: .2s
 }
 
-.btn-contato button:hover{
-    box-shadow: 0 0 8px rgb(38, 1, 124);
+.contact-button button:hover{
+    box-shadow: 0 0 8px var(--cor-principal);
     transform: scale(1.05);
 }
 
 /* Estilo do banner */
 
+.banner{
+    margin-top: 90px;
+}
+
 .banner img{
-    position: absolute;
     width: 100vw;
+}
+
+/* Estilo dos destaques */
+
+.destaques{
+    margin: 1vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dstq img{
+    width: 31vw;
+    border-radius: 5%;
 }
 
 @media only screen and (max-width: 1240px) 
 {
     /* Estilo do cabeçalho */
 
-    .mobile{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-
     header{
+        width: calc(100% - 8vw);
         margin-left: 4vw;
-        margin-right: 4vw;
         justify-content: space-between;
         padding-right: 1vw;
         padding-left: 1vw;
         flex-direction: column;
     } 
 
-    header ul{
-        display: none;
+    header .mobile-elements{
+        height: 60px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
-    .button {
+    header .menu-button {
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -188,32 +188,37 @@ nav a:hover .bar{
         transition: 0.4s;
     }
 
-    .change .bar1 {
+    .menu-button-selected .bar1 {
         transform: translate(0, 8px) rotate(45deg);
         width: 25px;
     }
 
-    .change .bar2 {
+    .menu-button-selected .bar2 {
         opacity: 0;
     }
 
-    .change .bar3 {
+    .menu-button-selected .bar3 {
         transform: translate(0, -8px) rotate(-45deg);
         width: 25px;
     }
 
-    .menu-mobile{
+    header .menu{
+        display: none;
+    }
+
+    header .mobile-menu{
+        display: flex;
         left: 0;
         width: 100%;
-        background: rgb(38, 1, 124);
+        background: var(--cor-principal);
+        list-style-type: none;
         flex-direction: column;
-        display: flex;
         align-items: flex-start;
         font-size: 22px;
         width: 100%;
     }
 
-    .menu-mobile nav{
+    header .mobile-menu nav{
         padding-top: 2vh;
         padding-left: 1.2vw;
         margin-left: 0;
@@ -224,36 +229,34 @@ nav a:hover .bar{
         flex-direction: column;
     }
 
-    .menu-mobile nav li{
+    header .mobile-menu nav li{
         margin-top: 5px;
         padding: 0 0;
         max-width: none;
     }
 
-    .menu-mobile .btn-contato{
+    header .mobile-menu .contact-button{
         margin-top: 7vh;
         margin-bottom: 2vh;
         width: 100%;
     }
 
-    .menu-mobile .btn-contato a{
+    header .mobile-menu .contact-button a{
         padding-left: 1.2vw;
         padding-right: 1.2vw;
         width: 100%;
     }
 
-    .menu-mobile .btn-contato button{
+    header .mobile-menu .contact-button button{
         margin-right: 0;
         width: 100%;
     }
 
-    .menu-mobile .btn-contato a:hover{
+    header .mobile-menu .contact-button a:hover{
         transform: scale(1.01)
     }
 
-    .menu-mobile .btn-contato button:hover{
+    header .mobile-menu .contact-button button:hover{
         transform: none;
     }
-
-    /* Estilo do banner */
 }
