@@ -147,6 +147,36 @@ header .menu nav a:hover .bar{
     border-radius: 5%;
 }
 
+
+/* Estilo do rodapé */
+
+footer{
+    background-color: var(--cor-principal);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3vh;
+    padding-top: 1vh;
+    padding-right: 3vw;
+    padding-left: 3vw;
+}
+
+footer .logo a{
+    display: flex;
+}
+
+footer .social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+
+footer .social-media i{
+    font-size: 50px;
+    color: white;
+}
+
 @media only screen and (max-width: 1240px) 
 {
     /* Estilo do cabeçalho */
@@ -260,3 +290,4 @@ header .menu nav a:hover .bar{
         transform: none;
     }
 }
+
