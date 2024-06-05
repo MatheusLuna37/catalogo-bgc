@@ -137,7 +137,10 @@ header .menu nav a:hover .bar{
 /* Estilo dos destaques */
 
 .destaques{
-    margin: 1vw;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    margin-top: 2vh;
+    margin-bottom: 0;
     display: flex;
     justify-content: space-between;
 }
@@ -147,6 +150,69 @@ header .menu nav a:hover .bar{
     border-radius: 5%;
 }
 
+.favoritas{
+    margin-top: 4vh;
+    margin-bottom: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favoritas .section-title{
+    color: white;
+    font-size: 3em;
+    font-weight: 300;
+}
+
+.favoritas .section-title span{
+    color: var(--cor-principal);
+    font-weight: 500;
+}
+
+.cols{
+    margin-top: 4vh;
+    display: grid;
+    width: 94%;
+    justify-content: space-evenly;
+}
+
+.product{
+    padding: 0.3rem;
+}
+
+.product:hover{
+    box-shadow: 0 0 10px 6px rgba(38, 1, 124, 0.408);
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.084);
+    border-width: 0.1px;
+}
+
+.product a{
+    text-decoration: none;
+}
+
+.product .product-name{
+    font-size: 20px;
+    color: white;
+}
+
+.product .product-price{
+    color: white;
+}
+
+.product .product-price span{
+    color: var(--cor-principal);
+}
+
+.cols-8 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3vw;
+}
+
+.cols-8 img{
+    width: 100%;
+    min-width: 100px;
+}
 
 /* Estilo do rodapé */
 
@@ -288,6 +354,10 @@ footer .social-media i{
 
     header .mobile-menu .contact-button button:hover{
         transform: none;
+    }
+
+    .favoritas .section-title{
+        font-size: 3em;
     }
 }
 
