@@ -145,12 +145,20 @@ header .menu nav a:hover .bar{
     justify-content: space-between;
 }
 
+.dstq{
+    transition: .15s;
+}
+
+.dstq:hover{
+    transform: translateY(-5px);
+}
+
 .dstq img{
     width: 31vw;
     border-radius: 5%;
 }
 
-.favoritas{
+.products-section{
     margin-top: 4vh;
     margin-bottom: 2vw;
     display: flex;
@@ -158,13 +166,13 @@ header .menu nav a:hover .bar{
     align-items: center;
 }
 
-.favoritas .section-title{
+.section-title{
     color: white;
     font-size: 3em;
     font-weight: 300;
 }
 
-.favoritas .section-title span{
+.section-title span{
     color: var(--cor-principal);
     font-weight: 500;
 }
@@ -185,6 +193,7 @@ header .menu nav a:hover .bar{
     border-style: solid;
     border-color: rgba(255, 255, 255, 0.084);
     border-width: 0.1px;
+    cursor: pointer;
 }
 
 .product a{
@@ -222,24 +231,29 @@ footer{
     align-items: center;
     justify-content: space-between;
     margin-top: 3vh;
-    padding-top: 1vh;
+    padding-top: 0.5vh;
     padding-right: 3vw;
     padding-left: 3vw;
 }
 
 footer .logo a{
     display: flex;
+    align-items: center;
+}
+
+footer .logo img{
+    height: 40px;
 }
 
 footer .social-media{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3vw;
+    gap: 2vw;
 }
 
 footer .social-media i{
-    font-size: 50px;
+    font-size: 40px;
     color: white;
 }
 
@@ -356,8 +370,8 @@ footer .social-media i{
         transform: none;
     }
 
-    .favoritas .section-title{
-        font-size: 3em;
+    .section-title{
+        font-size: 2.5em;
     }
 }
 

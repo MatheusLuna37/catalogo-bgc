@@ -25,4 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
       lastScrollY = window.scrollY;
     });
   });
+
+document.getElementById("orderBtn").addEventListener("click", function () {
+  const productName = document.getElementById("product-name").innerHTML;
+  const size = document.getElementById("sizes").value;
+  const message = `Gostaria de fazer o pedido de uma ${productName} no tamanho ${size}.`;
+  const phone = '+558791690167';
+  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+});
   
