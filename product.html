@@ -58,20 +58,21 @@
                 </div>
                 <div class="details">
                     <h2 class="product-name" id="product-name">Camisa Brasil 22-23</h2>
-                    <h3>Tamanhos:</h3>
-                    <select name="sizes" id="sizes">
-                        <option value="P">P</option>
-                        <option value="M">M</option>
-                        <option value="G">G</option>
-                    </select>
-                    <div class="orderBtn">
-                        <button id="orderBtn">Enviar Pedido</button>
+                    <h2 class="product-price"><span>R$</span> 100,00</h2>
+                    <h3>Tamanho:</h3>
+                    <div class="size-selector">
+                        <div class="size-option" data-size="P">P</div>
+                        <div class="size-option" data-size="M">M</div>
+                        <div class="size-option" data-size="G">G</div>
                     </div>
-                    
+                    <form id="size-form">
+                        <input type="hidden" class="sizerSize" id="shirtSize" value="">
+                        <button type="submit" class="orderBtn"><i class="bi bi-handbag"></i> Enviar Pedido</button>
+                    </form> 
                 </div>
             </div>
             <div class="detalhes-do-produto">
-                <h2>Detalhes do Produto:</h2>
+                <h2>Detalhes do Produto:</h2><br>
                 <p>Camisa 100% algodão qualidade BGC né painho</p>
             </div>
         </section>
@@ -93,5 +94,5 @@
         </div>
     </footer>
 </body>
-<script src="scripts/homepage.js"></script>
+<script src="scripts/productPage.js"></script>
 </html>

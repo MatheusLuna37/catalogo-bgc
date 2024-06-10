@@ -131,7 +131,7 @@ main{
 
 main .message{
     margin-top: 100px;
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 main .message span{
@@ -145,6 +145,7 @@ main .message span{
 .single-product .image-and-details{
     display: flex;
     margin-top: 4vh;    
+    margin-bottom: 6vh;
 }
 
 .single-product .image-and-details .img{
@@ -153,7 +154,7 @@ main .message span{
 }
 
 .single-product .image-and-details img{
-    width: 600px;
+    width: 40vw;
 }
 
 .single-product .image-and-details .details{
@@ -164,7 +165,12 @@ main .message span{
 
 .single-product .image-and-details .details .product-name{
     font-size: 2rem;
-    margin-bottom: 2vh;
+    font-weight: 400;
+}
+
+.details .product-price{
+    font-weight: 400;
+    margin-bottom: 4vh;
 }
 
 .single-product .image-and-details .details h3{
@@ -172,8 +178,54 @@ main .message span{
     font-weight: 300;
 }
 
-.single-product .image-and-details .details select{
-    
+.size-selector{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-top: 1vh;
+    margin-bottom: 8vh;
+}
+
+.size-selector .size-option{
+    background-color: rgb(27, 26, 26);
+    border-radius: 6px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.635);
+    border-width: 1px;
+    font-size: 1.3rem;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 33px;
+    color: white;
+}
+
+.size-selector .size-option:hover{
+    cursor: pointer;
+}
+
+.size-selector .selected{
+    border-width: 3px;
+    border-color: white;
+    line-height: 29px;
+}
+
+#size-form{
+    width: 30vw;
+}
+
+#size-form button{
+    height: 45px;
+    width: 100%;
+    background-color: var(--cor-principal);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+}
+
+#size-form button:hover{
+    cursor: pointer;
 }
 
 .single-product .detalhes-do-produto{
