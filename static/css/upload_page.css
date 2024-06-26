@@ -1,0 +1,27 @@
+/* Estilo Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    scrollbar-color: #484D64 #252835
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    color: black;
+}
+
+option{
+    color: black;
+}

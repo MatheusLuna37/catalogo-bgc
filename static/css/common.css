@@ -134,29 +134,6 @@ header .menu nav a:hover .bar{
     width: 100vw;
 }
 
-/* Estilo dos destaques */
-
-.destaques{
-    margin-right: 1vw;
-    margin-left: 1vw;
-    margin-top: 2vh;
-    margin-bottom: 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-.dstq{
-    transition: .15s;
-}
-
-.dstq:hover{
-    transform: translateY(-5px);
-}
-
-.dstq img{
-    width: 31vw;
-    border-radius: 5%;
-}
 
 .products-section{
     margin-top: 4vh;
@@ -196,6 +173,11 @@ header .menu nav a:hover .bar{
     cursor: pointer;
 }
 
+.product .img{
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
 .product a{
     text-decoration: none;
 }
@@ -213,14 +195,14 @@ header .menu nav a:hover .bar{
     color: var(--cor-principal);
 }
 
-.cols-8 {
+.cols {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 3vw;
 }
 
-.cols-8 img{
+.cols img{
     width: 100%;
-    min-width: 100px;
+    min-width: 200px;
 }
 
 /* Estilo do rodapé */
@@ -374,4 +356,3 @@ footer .social-media i{
         font-size: 2.5em;
     }
 }
-

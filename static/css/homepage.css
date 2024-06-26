@@ -1,0 +1,23 @@
+/* Estilo dos destaques */
+
+.destaques{
+    margin-right: 1vw;
+    margin-left: 1vw;
+    margin-top: 2vh;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dstq{
+    transition: .15s;
+}
+
+.dstq:hover{
+    transform: translateY(-5px);
+}
+
+.dstq img{
+    width: 31vw;
+    border-radius: 5%;
+}

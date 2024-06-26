@@ -31,7 +31,7 @@ def homepage():
         product_mainImage.append((product, mainImage))
     cursor.close()
     conn.close()
-    return render_template('homepage.html', categories=categories, favorites=product_mainImage)
+    return render_template('homepage.html', categories=categories, products=product_mainImage)
 
 
 @app.route('/category/<int:category_id>')
@@ -68,6 +68,14 @@ def product_page(shirt_id):
     cursor.close()
     conn.close()
     return render_template("product_page.html", categories=categories, shirt=shirt, images=images)
+
+
+@app.route('/upload_page')
+def upload_page():
+    conn = connect_to_mysql()
+    cursor = conn.cursor(dictionary=True)
+    return render_template("upload_page.html")
+
 
 
 if __name__ == '__main__':
